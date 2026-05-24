@@ -1,0 +1,5 @@
+[
+  {"model": "thelineup_api.setlistsong", "pk": 1, "fields": {"setlist": 1, "song": 1}},
+  {"model": "thelineup_api.setlistsong", "pk": 2, "fields": {"setlist": 1, "song": 2}},
+  {"model": "thelineup_api.setlistsong", "pk": 3, "fields": {"setlist": 1, "song": 3}}
+]

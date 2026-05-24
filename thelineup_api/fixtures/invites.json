@@ -1,0 +1,112 @@
+[
+  {
+    "model": "thelineup_api.invite",
+    "pk": 1,
+    "fields": {
+      "slot": 1,
+      "musician": 2,
+      "status": "pending",
+      "sent_at": "2026-05-20T10:00:00Z",
+      "responded_at": null
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 2,
+    "fields": {
+      "slot": 2,
+      "musician": 3,
+      "status": "accepted",
+      "sent_at": "2026-05-18T09:00:00Z",
+      "responded_at": "2026-05-19T14:00:00Z"
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 3,
+    "fields": {
+      "slot": 3,
+      "musician": 4,
+      "status": "declined",
+      "sent_at": "2026-05-17T09:00:00Z",
+      "responded_at": "2026-05-17T15:00:00Z"
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 4,
+    "fields": {
+      "slot": 4,
+      "musician": 5,
+      "status": "pending",
+      "sent_at": "2026-05-21T10:00:00Z",
+      "responded_at": null
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 5,
+    "fields": {
+      "slot": 5,
+      "musician": 5,
+      "status": "pending",
+      "sent_at": "2026-05-21T11:00:00Z",
+      "responded_at": null
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 6,
+    "fields": {
+      "slot": 6,
+      "musician": 5,
+      "status": "accepted",
+      "sent_at": "2026-05-19T09:00:00Z",
+      "responded_at": "2026-05-20T10:00:00Z"
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 7,
+    "fields": {
+      "slot": 7,
+      "musician": 5,
+      "status": "declined",
+      "sent_at": "2026-05-18T08:00:00Z",
+      "responded_at": "2026-05-18T16:00:00Z"
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 8,
+    "fields": {
+      "slot": 8,
+      "musician": 5,
+      "status": "withdrawn",
+      "sent_at": "2026-05-17T08:00:00Z",
+      "responded_at": null
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 9,
+    "fields": {
+      "slot": 9,
+      "musician": 5,
+      "status": "pending",
+      "sent_at": "2026-05-22T08:00:00Z",
+      "responded_at": null
+    }
+  },
+  {
+    "model": "thelineup_api.invite",
+    "pk": 10,
+    "fields": {
+      "slot": 10,
+      "musician": 5,
+      "status": "pending",
+      "sent_at": "2026-05-22T09:00:00Z",
+      "responded_at": null
+    }
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "model": "thelineup_api.song",
+    "pk": 1,
+    "fields": {
+      "title": "Autumn Leaves",
+      "artist": "Various",
+      "spotify_id": "spotify_autumn_leaves",
+      "preview_url": null,
+      "album_art_url": null
+    }
+  },
+  {
+    "model": "thelineup_api.song",
+    "pk": 2,
+    "fields": {
+      "title": "So What",
+      "artist": "Miles Davis",
+      "spotify_id": "spotify_so_what",
+      "preview_url": null,
+      "album_art_url": null
+    }
+  },
+  {
+    "model": "thelineup_api.song",
+    "pk": 3,
+    "fields": {
+      "title": "Fly Me to the Moon",
+      "artist": "Various",
+      "spotify_id": "spotify_fly_me_to_the_moon",
+      "preview_url": null,
+      "album_art_url": null
+    }
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 1,
+    "fields": {"gig": 1, "instrument": 1, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 2,
+    "fields": {"gig": 1, "instrument": 2, "filled_by": 3}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 3,
+    "fields": {"gig": 1, "instrument": 3, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 4,
+    "fields": {"gig": 2, "instrument": 4, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 5,
+    "fields": {"gig": 2, "instrument": 5, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 6,
+    "fields": {"gig": 3, "instrument": 5, "filled_by": 5}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 7,
+    "fields": {"gig": 3, "instrument": 4, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 8,
+    "fields": {"gig": 2, "instrument": 1, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 9,
+    "fields": {"gig": 3, "instrument": 2, "filled_by": null}
+  },
+  {
+    "model": "thelineup_api.gigslot",
+    "pk": 10,
+    "fields": {"gig": 2, "instrument": 3, "filled_by": null}
+  }
+]

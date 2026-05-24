@@ -1,0 +1,9 @@
+[
+  {"model": "thelineup_api.instrument", "pk": 1, "fields": {"name": "Guitar"}},
+  {"model": "thelineup_api.instrument", "pk": 2, "fields": {"name": "Bass"}},
+  {"model": "thelineup_api.instrument", "pk": 3, "fields": {"name": "Drums"}},
+  {"model": "thelineup_api.instrument", "pk": 4, "fields": {"name": "Piano"}},
+  {"model": "thelineup_api.instrument", "pk": 5, "fields": {"name": "Vocals"}},
+  {"model": "thelineup_api.instrument", "pk": 6, "fields": {"name": "Trumpet"}},
+  {"model": "thelineup_api.instrument", "pk": 7, "fields": {"name": "Saxophone"}}
+]

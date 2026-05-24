@@ -1,0 +1,10 @@
+[
+  {
+    "model": "thelineup_api.setlist",
+    "pk": 1,
+    "fields": {
+      "created_by": 1,
+      "name": "Blue Room Jazz Night Set"
+    }
+  }
+]

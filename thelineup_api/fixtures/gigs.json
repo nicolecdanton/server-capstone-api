@@ -1,0 +1,38 @@
+[
+  {
+    "model": "thelineup_api.gig",
+    "pk": 1,
+    "fields": {
+      "booker": 1,
+      "title": "Jazz Night at The Blue Room",
+      "venue": "The Blue Room",
+      "date": "2026-08-15T20:00:00Z",
+      "pay_per_musician": 150.00,
+      "setlist": 1
+    }
+  },
+  {
+    "model": "thelineup_api.gig",
+    "pk": 2,
+    "fields": {
+      "booker": 1,
+      "title": "R&B Night at The Blue Room",
+      "venue": "The Blue Room",
+      "date": "2026-09-10T20:00:00Z",
+      "pay_per_musician": 175.00,
+      "setlist": null
+    }
+  },
+  {
+    "model": "thelineup_api.gig",
+    "pk": 3,
+    "fields": {
+      "booker": 1,
+      "title": "Late Night Jazz Sessions",
+      "venue": "The Blue Room",
+      "date": "2026-10-05T22:00:00Z",
+      "pay_per_musician": 120.00,
+      "setlist": null
+    }
+  }
+]

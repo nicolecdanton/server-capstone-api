@@ -1,0 +1,134 @@
+[
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "bio": "Jazz booker and promoter at The Blue Room.",
+      "soundcloud": "",
+      "instagram_handle": "marcusatblueroom",
+      "instrument": []
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "bio": "Jazz guitarist based in Nashville.",
+      "soundcloud": "",
+      "instagram_handle": "ava_plays_guitar",
+      "instrument": [1, 4]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "bio": "Bassist. I hold it down.",
+      "soundcloud": "",
+      "instagram_handle": "jalen_bass",
+      "instrument": [2, 6]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "bio": "Drummer and composer.",
+      "soundcloud": "",
+      "instagram_handle": "priya_drums",
+      "instrument": [3, 7]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "bio": "Pianist and vocalist available for jazz and R&B gigs.",
+      "soundcloud": "https://soundcloud.com/nicole-danton",
+      "instagram_handle": "nicole_keys",
+      "instrument": [4, 5]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "bio": "Fingerstyle guitarist with a blues background.",
+      "soundcloud": "",
+      "instagram_handle": "leo_guitar",
+      "instrument": [1]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 7,
+    "fields": {
+      "user": 7,
+      "bio": "Session guitarist available for jazz and funk.",
+      "soundcloud": "",
+      "instagram_handle": "sam_strums",
+      "instrument": [1]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 8,
+    "fields": {
+      "user": 8,
+      "bio": "Electric guitarist. Bebop, fusion, whatever you need.",
+      "soundcloud": "",
+      "instagram_handle": "dante_six_strings",
+      "instrument": [1]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 9,
+    "fields": {
+      "user": 9,
+      "bio": "Guitarist and bassist. Versatile and reliable.",
+      "soundcloud": "",
+      "instagram_handle": "zoe_riffs",
+      "instrument": [1, 2]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 10,
+    "fields": {
+      "user": 10,
+      "bio": "Jazz drummer. Groove-first, always.",
+      "soundcloud": "",
+      "instagram_handle": "theo_drums",
+      "instrument": [3]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 11,
+    "fields": {
+      "user": 11,
+      "bio": "Drummer and percussionist. 15 years gigging.",
+      "soundcloud": "",
+      "instagram_handle": "luna_beats",
+      "instrument": [3, 7]
+    }
+  },
+  {
+    "model": "thelineup_api.userprofile",
+    "pk": 12,
+    "fields": {
+      "user": 12,
+      "bio": "Drummer with a background in Latin jazz.",
+      "soundcloud": "",
+      "instagram_handle": "omar_percussion",
+      "instrument": [3]
+    }
+  }
+]

@@ -1,0 +1,66 @@
+Table UserProfile {
+  id int [pk, increment]
+  user_id int
+  bio text
+  soundcloud link
+  instagram text
+}
+
+Table Instrument {
+  id int [pk, increment]
+  name varchar [unique]
+}
+
+Table UserInstrument {
+  id int [pk, increment]
+  user_id int [ref: > UserProfile.id]
+  instrument_id int [ref: > Instrument.id]
+}
+
+Table Gig {
+  id int [pk, increment]
+  booker int [ref: > UserProfile.id]
+  title varchar
+  venue varchar
+  date datetime
+  pay_per_musician float
+  setlist_id int [ref: > Setlist.id, null]
+}
+
+Table Song {
+  id int [pk, increment]
+  title varchar
+  artist varchar
+  spotify_id varchar [unique]
+  preview_url varchar [null]
+  album_art_url varchar [null]
+}
+
+
+Table GigSlot {
+  id int [pk, increment]
+  gig_id int [ref: > Gig.id]
+  instrument_id int [ref: > Instrument.id]
+  filled_by int [ref: > UserProfile.id, null]
+}
+
+Table Setlist {
+  id int [pk, increment]
+  created_by int [ref: > UserProfile.id]
+  name varchar
+}
+
+Table SetlistSong {
+  id int [pk, increment]
+  setlist_id int [ref: > Setlist.id]
+  song_id int [ref: > Song.id]
+}
+
+Table Invite {
+  id int [pk, increment]
+  slot_id int [ref: > GigSlot.id]
+  musician_id int [ref: > UserProfile.id]
+  status varchar // pending, accepted, declined, withdrawn
+  sent_at datetime
+  responded_at datetime [null]
+}
