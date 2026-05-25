@@ -108,13 +108,16 @@ class SavedSongView(ViewSet):
     def create(self, request):
         """POST /songs — save a song from Spotify to the database.
         Called when a user selects a song to add to a setlist"""
-
-        song = Song.objects.create(
-            title=request.data["title"],
-            artist=request.data["artist"],
-            spotify_id=request.data["spotify_id"],
-            album_art_url=request.data.get("album_art_url"),
-        )
+        #the song might already exist in our Song model if another user has added the same song to their setlist before, so we check if a song with the same spotify_id already exists. If it does, we just return that existing song. If it doesn't, we create a new one with the details from the request.
+        try:
+            song = Song.objects.get(spotify_id=request.data["spotify_id"])
+        except Song.DoesNotExist:
+            song = Song.objects.create(
+                title=request.data["title"],
+                artist=request.data["artist"],
+                spotify_id=request.data["spotify_id"],
+                album_art_url=request.data.get("album_art_url"),
+            )
 
         serializer = SongSerializer(song)
         return Response(serializer.data, status=status.HTTP_201_CREATED)

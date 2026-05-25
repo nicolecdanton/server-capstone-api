@@ -84,7 +84,6 @@ class InviteView(ViewSet):
                 pk=request.data["musician_id"]),
             status = "pending"
             )
-        invite.save()
 
         serializer = InviteSerializer(invite)
         return Response(serializer.data, status=status.HTTP_201_CREATED)

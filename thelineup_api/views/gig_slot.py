@@ -76,6 +76,15 @@ class GigSlotView(viewsets.ViewSet):
         serializer = GigSlotSerializer(gigSlots, many=True)
         return Response(serializer.data)
     
+    def retrieve(self, request, pk=None):
+        """GET /gigslots/{id}/ — get a single slot"""
+        try:
+            slot = GigSlot.objects.get(pk=pk)
+        except GigSlot.DoesNotExist:
+            return Response({"message": "Slot not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = GigSlotSerializer(slot)
+        return Response(serializer.data)
 
     def create(self, request):
         """Handle POST requests to create a new gig slot. Only the gig's booker can add slots. New gig slots are created in connection with a gig, so the gig id must be passed in the request body."""

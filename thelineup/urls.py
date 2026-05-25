@@ -5,7 +5,7 @@ from rest_framework import routers
 from thelineup_api.views import *
 
 # pylint: disable=invalid-name
-router = routers.DefaultRouter(trailing_slash=False)
+router = routers.DefaultRouter()
 router.register(r"profiles", UserProfileView, "profile")
 router.register(r"instruments", InstrumentView, "instrument")
 router.register(r"gigs", GigView, "gig")
