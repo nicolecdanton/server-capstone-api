@@ -5,4 +5,4 @@ from .gig import GigView
 from .gig_slot import GigSlotView
 from .invite import InviteView
 from .song import SongView
-from .setlist import SetlistView
+from .setlist import SetlistView, SetlistSongView

@@ -13,6 +13,7 @@ router.register(r"gigslots", GigSlotView, "gigslot")
 router.register(r"invites", InviteView, "invite")
 router.register(r"songs", SongView, "song")
 router.register(r"setlists", SetlistView, "setlist")
+router.register(r"setlist-songs", SetlistSongView, "setlist-song")
 
 
 urlpatterns = [

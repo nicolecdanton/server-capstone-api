@@ -1,4 +1,4 @@
-"""View module for handling requests about songs, including Spotify search"""
+"""View module for handling requests about songs, including Spotify search. The song data comes from Spotify and then we save data about songs that users add to their setlists in our database."""
 
 import os
 import time

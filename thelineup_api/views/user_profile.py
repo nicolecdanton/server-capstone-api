@@ -6,41 +6,30 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 
 from thelineup_api.models import UserProfile, Instrument
-
-
-# ── Serializers ───────────────────────────────────────────────────────────────
-
-class InstrumentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Instrument
-        fields = ['id', 'name']
+from thelineup_api.views.instrument import InstrumentSerializer
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    # Read: returns full instrument objects
     instrument = InstrumentSerializer(many=True, read_only=True)
-
-    # Write: accepts a list of instrument IDs
-    instrument_ids = serializers.PrimaryKeyRelatedField(
-        many=True,
-        write_only=True,
-        queryset=Instrument.objects.all(),
-        source='instrument'
-    )
-
-    # Expose username and name from the related User
     username = serializers.CharField(source='user.username', read_only=True)
     first_name = serializers.CharField(source='user.first_name', read_only=True)
     last_name = serializers.CharField(source='user.last_name', read_only=True)
 
     class Meta:
         model = UserProfile
-        fields = [
-            'id', 'username', 'first_name', 'last_name',
-            'bio', 'soundcloud', 'instagram_handle',
-            'instrument', 'instrument_ids'
-        ]
+        fields = ['id', 'username', 'first_name', 'last_name', 'bio', 'soundcloud', 'instagram_handle', 'instrument']
 
+
+class UserProfileUpdateSerializer(serializers.ModelSerializer):
+    instrument_ids = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=Instrument.objects.all(),
+        source='instrument'
+    )
+
+    class Meta:
+        model = UserProfile
+        fields = ['bio', 'soundcloud', 'instagram_handle', 'instrument_ids']
 
 # ── ViewSet ───────────────────────────────────────────────────────────────────
 
@@ -63,21 +52,13 @@ class UserProfileView(ViewSet):
             return HttpResponseServerError(ex)
 
     def partial_update(self, request, user_id=None):
-        """PATCH /profiles/{user_id}/ — edit your own profile only."""
-        try:
-            profile = UserProfile.objects.get(user_id=user_id)
+        profile = UserProfile.objects.get(user_id=user_id)
 
-            if profile.user != request.auth.user:
-                return Response(
-                    {'error': 'You can only edit your own profile.'},
-                    status=status.HTTP_403_FORBIDDEN
-                )
+        if profile.user != request.auth.user:
+            return Response({'error': 'You can only edit your own profile.'}, status=status.HTTP_403_FORBIDDEN)
 
-            serializer = UserProfileSerializer(profile, data=request.data, partial=True)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        except UserProfile.DoesNotExist as ex:
-            return HttpResponseServerError(ex)
+        serializer = UserProfileUpdateSerializer(profile, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(UserProfileSerializer(profile).data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
