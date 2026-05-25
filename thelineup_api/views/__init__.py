@@ -4,5 +4,5 @@ from .instrument import InstrumentView
 from .gig import GigView
 from .gig_slot import GigSlotView
 from .invite import InviteView
-from .song import SongView
+from .song import SavedSongView, SpotifySearchView
 from .setlist import SetlistView, SetlistSongView

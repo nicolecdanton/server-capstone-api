@@ -82,7 +82,8 @@ class SetlistView(ViewSet):
 
         serializer = SetlistSerializer(setlist)
         return Response(serializer.data)
-
+    
+    #delete an actual setlist
     def destroy(self, request, pk=None):
         """DELETE /setlists/{id} — delete a setlist. Only the creator can delete."""
         try:
